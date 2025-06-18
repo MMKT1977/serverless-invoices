@@ -7,6 +7,6 @@ export default {
   default_locale: 'en',
   features: {
     offline_mode: true,
-    pdf_export: true
-  }
+    pdf_export: true,
+  },
 };

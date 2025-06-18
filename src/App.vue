@@ -50,8 +50,13 @@ export default {
 </script>
 
 <style lang="scss">
-@import './assets/scss/variables';
-@import '../node_modules/bootstrap/scss/bootstrap';
-@import '../node_modules/bootstrap-vue/dist/bootstrap-vue.min.css';
-@import './assets/scss/app';
+// 1. Load variables first (ensure path is correct)
+@import '@/assets/scss/variables';
+
+// 2. Import Bootstrap SCSS (corrected paths)
+@import '~bootstrap/scss/bootstrap';
+@import '~bootstrap-vue/src/index.scss';
+
+// 3. Load your app styles (ensure file exists)
+@import '@/assets/scss/app';
 </style>
