@@ -109,3 +109,4 @@ Get **50%** off your first year with the code **ELEVATE**
 **MOKU** offers simple time tracking, task management and automated invoicing for ambitious dev teams and freelancers.
  - [Get your free trial](https://mokuapp.io/)
 
+**deployed to vercel for showing to client**
