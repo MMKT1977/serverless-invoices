@@ -3,7 +3,6 @@ import Router from 'vue-router';
 import store from '@/store/store';
 import i18n from '@/config/i18n.config';
 
-// Primary config import
 import appConfig from '@/config/app.config';
 
 Vue.use(Router);
@@ -13,7 +12,7 @@ const routes = [
     path: '/',
     name: 'dashboard',
     redirect: 'invoices',
-    component: () => import(/* webpackChunkName: "dashboard" */ '@/views/dashboard/Dashboard.vue'),
+    component: () => import('@/views/dashboard/Dashboard.vue'),
     beforeEnter: async (to, from, next) => {
       await store.dispatch('teams/init');
       next();
@@ -22,13 +21,13 @@ const routes = [
       {
         path: '/invoices',
         name: 'invoices',
-        component: () => import(/* webpackChunkName: "invoices" */ '@/views/dashboard/Invoices.vue'),
+        component: () => import('@/views/dashboard/Invoices.vue'),
         meta: { requiresAuth: true },
       },
       {
         path: '/invoice/:id',
         name: 'invoice',
-        component: () => import(/* webpackChunkName: "invoice" */ '@/views/dashboard/Invoice.vue'),
+        component: () => import('@/views/dashboard/Invoice.vue'),
         meta: { requiresAuth: true },
       },
     ],
@@ -36,7 +35,7 @@ const routes = [
   {
     path: '/invoices/:id/print',
     name: 'invoice-print',
-    component: () => import(/* webpackChunkName: "print" */ '@/views/InvoicePrint.vue'),
+    component: () => import('@/views/InvoicePrint.vue'),
   },
   {
     path: '*',
