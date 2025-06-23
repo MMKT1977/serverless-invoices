@@ -10,6 +10,7 @@ import store from '@/store/store';
 import VueNotifications from 'vue-notification';
 import './registerServiceWorker';
 import i18n from './config/i18n.config';
+// import 'vue-multiselect/dist/vue-multiselect.min.css';
 
 Vue.use(ModalPlugin);
 Vue.use(VueNotifications);
